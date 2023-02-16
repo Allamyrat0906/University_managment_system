@@ -1,0 +1,57 @@
+body {
+
+  position: relative;
+  min-height: 100%;
+}
+
+a {
+  transition: background 0.2s, color 0.2s;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+.box .inner {
+  line-height: 0px;
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.box .inner:first-child {
+  color: rgb(255, 255, 255);
+  transform-origin: right;
+}
+
+.box .inner:last-child {
+  color: antiquewhite;
+  transform-origin: left;
+  transform: perspective(100px) rotateY(15deg);
+}
+
+.box .inner span {
+  position: absolute;
+  animation: marquee 15s linear infinite;
+}
+
+.box .inner:first-child span {
+  animation-delay: 0s;
+  left: -100%;
+}
+
+@keyframes marquee {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: -100%;
+  }
+}

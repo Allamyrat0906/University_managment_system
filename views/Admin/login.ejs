@@ -1,0 +1,99 @@
+<%- include('../Includes/begin.ejs') %>
+    <%- include('../Includes/navbar.ejs') %>
+        <section>
+ 
+            <main role="main">
+                <div
+                class="p-5 text-center bg-image"
+                style="
+                  background-image: linear-gradient(
+                      rgba(0, 0, 0, 0.2),
+                      rgba(0, 0, 0, 0.2)
+                    ),
+                    url(https://www.elmhurst.edu/wp-content/uploads/2022/02/masters-information-technology-salary-illustration.jpg);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  background-position: center;
+                  height: 100vh;
+                "
+              >
+                <div
+                  class="col-md-11"
+                  style="
+                    padding-top: 50px;
+                    padding-right: 100px;
+                    padding-bottom: 50px;
+                    padding-left: 75px;
+                    position: fixed;
+                    
+                  "
+                >
+
+                <div class="header text-center pt-4 pt-lg-2">
+                    <h1> <span style="color: rgb(255, 255, 255);
+                        font-weight: 25px;">ADMIN LOGIN</span></h1>
+                </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 m-auto">
+                            <div class="card card-body"
+                                style="box-shadow: 0 1rem 2rem 0 rgba(136, 152, 170, .15) !important;
+                                    
+                position: fixed;
+                background: rgba(255, 255, 255, 0.41);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(6.5px);
+                -webkit-backdrop-filter: blur(6.5px);
+                border: 1px solid rgba(255, 255, 255, 0.52);
+                border-radius: 1%;
+              ">
+                                <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i> Login</h1>
+                                <%- include('../Includes/messages') %>
+                                    <form action="/admin/login" method="POST">
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" id="email" name="email" class="form-control"
+                                                placeholder="Enter Email" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <input type="password" id="password" name="password" class="form-control"
+                                                placeholder="Enter Password" required />
+                                        </div>
+                                        <button type="submit" class="btn btn-danger btn-block">Login</button>
+                                    </form>
+                                    <p class="lead mt-4">
+                                       <span style="color: #000000;"> No Account?</span> <a href="/admin/register">Register</a>
+                                    </p>
+                                    <p class="lead">
+                                        <span style="color: #000000;">Forgot Password? </span><a href="/admin/forgot-password">Generate New Password</a>
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+            <div
+      style="
+        padding: 15px;
+        width: 100%;
+        height: 60px;
+        background-color: #03036e;
+        text-align: center;
+      "
+    >
+      <footer>
+        <p style="color: rgb(255, 255, 255)">
+          Copyright © Muhammedowa Zuleyha student of OGUZ HAN ENGINEERING AND
+          TECHNOLOGY UNIVERSITY OF TURKMENISTAN.<span style="color: #ffffff"
+            >All Rights Reserved</span
+          >
+        </p>
+      </footer>
+    </div>
+            
+        </section>
+        <%- include('../Includes/end.ejs') %>
